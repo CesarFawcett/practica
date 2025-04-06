@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+
+//Ordenar un arreglo comparando pares
 public class BubbleSort {
     public static void bubbleSort(int[] arr) {
         int n = arr.length;
