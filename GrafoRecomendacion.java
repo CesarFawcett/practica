@@ -50,11 +50,10 @@ public class GrafoRecomendacion {
         List<Integer> productos = grafo.get(usuario);
         if (productos == null) return new ArrayList<>();
 
-        // productos por PageRank 
+        // productos por PageRank
         productos.sort((a, b) -> Double.compare(pageRank.get(b), pageRank.get(a)));
         return productos.subList(0, Math.min(cantidad, productos.size()));
     }
-
     public static void main(String[] args) {
         GrafoRecomendacion sistema = new GrafoRecomendacion();
         sistema.agregarArista(1, 101);
